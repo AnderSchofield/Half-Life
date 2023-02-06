@@ -114,6 +114,28 @@ def Doser(instance : Drug, dose : int, period :int, times : int) -> None:
 
 
 
+import datetime
+from os.path import relpath
+
+if not relpath("date.txt"):
+    with open("date.txt", "w") as f:
+        f.write("2020,12,12, 12,12,12")
+
+def CDate():
+    """
+    Calculate the difference between two dates and return the difference in hours
+
+    """
+    with open("date.txt", "r") as f:
+        sdate = f.read()
+    date1 = datetime.datetime.strptime(sdate, "%Y,%m,%d, %H,%M,%S")
+    date2 =datetime.datetime.strptime(datetime.datetime.now().strftime("%Y,%m,%d, %H,%M,%S"), "%Y,%m,%d, %H,%M,%S")
+    #Calculate the difference between two dates
+    diff = date2 - date1  
+    with open("date.txt", "w") as f:
+        f.write(datetime.datetime.now().strftime("%Y,%m,%d, %H,%M,%S"))
+ 
+    return int(diff.total_seconds()/3600)
 
 
 
