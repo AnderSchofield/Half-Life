@@ -1,4 +1,4 @@
-Claro, posso traduzir o README para o inglês! Quanto ao módulo, eu entendi a funcionalidade básica baseando-me no código que você forneceu. No entanto, existem alguns aspectos, como o propósito do parâmetro `var` no método `AddDose`, que não estão totalmente claros para mim. Se você puder fornecer mais contexto, posso oferecer uma assistência mais precisa. 
+
 
 ---
 
@@ -21,7 +21,7 @@ Make sure you have Python 3.x installed on your system.
 To use the Half-Life Module, import the `Drug` class in your Python code.
 
 ```python
-from half_life_module import Drug
+from farma.half_life import Drug
 
 # Assume the drug half-life is 5 hours and the absorption time is 1 hour
 drug = Drug("path/to/folder", 5, 1)
